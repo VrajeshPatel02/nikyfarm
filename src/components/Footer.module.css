@@ -1,0 +1,122 @@
+.footer {
+  background-color: var(--background);
+  border-top: var(--border-width) solid var(--border-color);
+  padding: var(--space-20) 0 var(--space-8);
+  margin-top: var(--space-24);
+}
+
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: var(--space-16);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.logoIcon {
+  color: var(--primary);
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--on-surface-variant);
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.linkTitle {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+}
+
+.link {
+  font-size: 0.875rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  transition: color var(--transition-staccato);
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+.bottom {
+  max-width: 1440px;
+  margin: var(--space-16) auto 0;
+  padding: var(--space-8) var(--space-8);
+  border-top: var(--border-width) solid var(--outline);
+  display: flex;
+  justify-content: center;
+}
+
+.bottom p {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--on-surface-variant);
+}
+
+@media (max-width: 992px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .links {
+    grid-template-columns: 1fr;
+  }
+}

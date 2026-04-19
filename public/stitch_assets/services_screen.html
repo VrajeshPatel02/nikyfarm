@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&amp;family=Public+Sans:wght@300;400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f9f9f8",
+                    "on-surface": "#191c1c",
+                    "inverse-surface": "#2e3131",
+                    "secondary-fixed-dim": "#c0c9bf",
+                    "surface-variant": "#e1e3e2",
+                    "surface-container-low": "#f3f4f3",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d9dad9",
+                    "secondary": "#586159",
+                    "on-surface-variant": "#434843",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#b4cdb8",
+                    "background": "#f9f9f8",
+                    "surface-container": "#edeeed",
+                    "on-secondary-container": "#5c655d",
+                    "surface-container-highest": "#e1e3e2",
+                    "primary-container": "#1b3022",
+                    "tertiary-fixed": "#fedada",
+                    "secondary-fixed": "#dce5db",
+                    "on-background": "#191c1c",
+                    "on-primary-container": "#819986",
+                    "on-tertiary-container": "#ab8c8c",
+                    "on-secondary-fixed-variant": "#404941",
+                    "tertiary": "#251213",
+                    "on-tertiary-fixed": "#2a1617",
+                    "tertiary-fixed-dim": "#e1bebe",
+                    "surface": "#f9f9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#b4cdb8",
+                    "primary-fixed": "#d0e9d4",
+                    "surface-container-high": "#e7e8e7",
+                    "on-secondary-fixed": "#151d17",
+                    "surface-tint": "#4d6453",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#594041",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#737973",
+                    "secondary-container": "#d9e2d8",
+                    "error": "#ba1a1a",
+                    "primary": "#061b0e",
+                    "outline-variant": "#c3c8c1",
+                    "tertiary-container": "#3c2627",
+                    "inverse-on-surface": "#f0f1f0",
+                    "on-primary-fixed-variant": "#364c3c",
+                    "on-primary-fixed": "#0b2013"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Public Sans"],
+                    "label": ["Public Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #f9f9f8; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="font-body text-on-surface selection:bg-tertiary-fixed-dim">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#f9f9f8] text-[#061b0e] border-0">
+<nav class="flex justify-between items-center w-full px-12 py-6">
+<div class="font-epilogue font-black text-2xl uppercase tracking-tighter">
+                NIKY FARM
+            </div>
+<div class="hidden md:flex gap-12">
+<a class="font-epilogue font-black uppercase tracking-tighter text-[#061b0e]/50 hover:bg-[#061b0e] hover:text-[#f9f9f8] transition-none px-2" href="#">Home</a>
+<a class="font-epilogue font-black uppercase tracking-tighter text-[#061b0e]/50 hover:bg-[#061b0e] hover:text-[#f9f9f8] transition-none px-2" href="#">About</a>
+<a class="font-epilogue font-black uppercase tracking-tighter text-[#061b0e] border-b-4 border-[#061b0e] px-2" href="#">Services</a>
+<a class="font-epilogue font-black uppercase tracking-tighter text-[#061b0e]/50 hover:bg-[#061b0e] hover:text-[#f9f9f8] transition-none px-2" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 font-epilogue font-black uppercase tracking-tighter hover:bg-tertiary-fixed-dim hover:text-primary transition-none">
+                Consultation
+            </button>
+</nav>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-12 py-24 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0">
+<div class="md:col-span-8">
+<span class="bg-tertiary-fixed-dim text-primary px-3 py-1 font-bold text-xs uppercase tracking-[0.2em] mb-8 inline-block">Our Offerings</span>
+<h1 class="text-[clamp(3.5rem,10vw,8rem)] leading-[0.85] font-headline font-black uppercase tracking-tighter mb-12">
+                            Cultivated<br/>Systems.
+                        </h1>
+</div>
+<div class="md:col-span-4 flex flex-col justify-end pb-4">
+<p class="text-body-md text-on-surface-variant leading-relaxed mb-8 border-l-4 border-primary pl-6">
+                            Bridging the gap between architectural rigidity and biological fluidness. Our services provide functional, sustainable ecosystems for modern living.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="bg-surface-container py-2">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-1">
+<!-- Service 01: Indoor Air Purifiers -->
+<div class="bg-surface p-12 flex flex-col justify-between min-h-[700px] border-b lg:border-b-0 lg:border-r border-outline-variant/20">
+<div>
+<div class="flex justify-between items-start mb-16">
+<span class="text-6xl font-headline font-black text-outline-variant/30 italic">01</span>
+<span class="material-symbols-outlined text-4xl text-primary">filter_vintage</span>
+</div>
+<h2 class="text-4xl font-headline font-black uppercase tracking-tight mb-6">Indoor Air Purifiers</h2>
+<p class="text-on-surface-variant mb-12 leading-relaxed">
+                            Botanical integration for the built environment. High-oxygen output systems designed as permanent structural elements.
+                        </p>
+<ul class="space-y-4 mb-16">
+<li class="flex items-center gap-3 font-bold text-xs uppercase tracking-widest"><span class="w-2 h-2 bg-tertiary-fixed-dim"></span> NASA-Grade Species</li>
+<li class="flex items-center gap-3 font-bold text-xs uppercase tracking-widest"><span class="w-2 h-2 bg-tertiary-fixed-dim"></span> Hydro-Logic Feeding</li>
+<li class="flex items-center gap-3 font-bold text-xs uppercase tracking-widest"><span class="w-2 h-2 bg-tertiary-fixed-dim"></span> Integrated Lighting</li>
+</ul>
+</div>
+<div>
+<div class="mb-8">
+<p class="text-xs uppercase tracking-widest text-outline mb-1">Standard Unit</p>
+<p class="text-3xl font-headline font-black">$1,200.00</p>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-black uppercase tracking-tighter hover:bg-tertiary-fixed-dim hover:text-primary transition-none">
+                            Acquire System
+                        </button>
+</div>
+</div>
+<!-- Service 02: Edible Container Kits -->
+<div class="bg-surface-container-high p-12 flex flex-col justify-between min-h-[700px] border-b lg:border-b-0 lg:border-r border-outline-variant/20">
+<div>
+<div class="flex justify-between items-start mb-16">
+<span class="text-6xl font-headline font-black text-outline-variant/30 italic">02</span>
+<span class="material-symbols-outlined text-4xl text-primary">potted_plant</span>
+</div>
+<h2 class="text-4xl font-headline font-black uppercase tracking-tight mb-6">Edible Container Kits</h2>
+<p class="text-on-surface-variant mb-12 leading-relaxed">
+                            Modular agricultural systems for the urban enthusiast. Brutalist concrete vessels paired with nutrient-dense soil profiles.
+                        </p>
+<div class="mb-12 h-64 w-full bg-primary relative overflow-hidden group">
+<img alt="Modern concrete planters" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist geometric concrete planters with vibrant green herb plants on a sunlit stone patio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaOKQDP0znMWl9KcHMVK-Bt5390dF7gCKxg8vGslPh0Zb7rHdvfvatbHp_rFA6ftxsGP1iypmiAAMpuu97BYewOwV7NEpD71FjQf9lvyrpeWJDDVHwm30wUliy4EyUCkw60XxWbtkeCBwiykjJ8r-GVNC31BtIs597nLzk-ASOEbG52w6lutHhxnwwizg6DNpzjRcQS_3ZLkTlYTB6AAdoqhFYjYgyMcfU_BMkWFdc9WNIK4_JM6cyKXEzR61Ka90WoqQlTMe2RlE"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+</div>
+<div>
+<div class="mb-8">
+<p class="text-xs uppercase tracking-widest text-outline mb-1">Modular Kit</p>
+<p class="text-3xl font-headline font-black">$450.00</p>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-black uppercase tracking-tighter hover:bg-tertiary-fixed-dim hover:text-primary transition-none">
+                            View Modules
+                        </button>
+</div>
+</div>
+<!-- Service 03: Professional Landscapes -->
+<div class="bg-primary p-12 flex flex-col justify-between min-h-[700px] text-on-primary">
+<div>
+<div class="flex justify-between items-start mb-16">
+<span class="text-6xl font-headline font-black text-on-primary-container/20 italic">03</span>
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim">architecture</span>
+</div>
+<h2 class="text-4xl font-headline font-black uppercase tracking-tight mb-6">Landscape Services</h2>
+<p class="text-on-primary-container mb-12 leading-relaxed">
+                            Eco-brutalist master planning. We design landscapes that function as living monoliths—structured, raw, and self-sustaining.
+                        </p>
+<div class="space-y-6">
+<div class="border-b border-on-primary-container/20 pb-4">
+<p class="text-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim mb-2">Phase 01</p>
+<p class="font-bold">Site Analysis &amp; Soil Mapping</p>
+</div>
+<div class="border-b border-on-primary-container/20 pb-4">
+<p class="text-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim mb-2">Phase 02</p>
+<p class="font-bold">Brutalist Structural Design</p>
+</div>
+<div class="border-b border-on-primary-container/20 pb-4">
+<p class="text-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim mb-2">Phase 03</p>
+<p class="font-bold">Biological Implementation</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<button class="w-full bg-surface text-primary py-5 font-black uppercase tracking-tighter hover:bg-tertiary-fixed-dim transition-none">
+                            Request Inquiry
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote/Callout Section -->
+<section class="bg-primary py-32 px-12 overflow-hidden relative">
+<div class="absolute right-[-10%] top-0 opacity-10 pointer-events-none">
+<span class="text-[25rem] font-headline font-black uppercase tracking-tighter text-on-primary">FERTILE</span>
+</div>
+<div class="max-w-5xl mx-auto relative z-10 text-center">
+<h2 class="text-5xl md:text-7xl font-headline font-black text-on-primary uppercase tracking-tighter mb-12">
+                    WE DON'T JUST PLANT.<br/>WE CONSTRUCT <span class="text-tertiary-fixed-dim">LIFE</span>.
+                </h2>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="border-b-2 border-tertiary-fixed-dim text-tertiary-fixed-dim font-bold uppercase tracking-widest text-sm py-2 hover:bg-tertiary-fixed-dim hover:text-primary px-4 transition-none" href="#">Download Manifesto</a>
+<a class="border-b-2 border-tertiary-fixed-dim text-tertiary-fixed-dim font-bold uppercase tracking-widest text-sm py-2 hover:bg-tertiary-fixed-dim hover:text-primary px-4 transition-none" href="#">Our Process</a>
+</div>
+</div>
+</section>
+<!-- Technical Specs / Bento Grid -->
+<section class="bg-surface-container py-24 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="md:col-span-2 bg-surface p-12">
+<h3 class="font-headline font-black text-2xl uppercase mb-6">Sustainable Ethics</h3>
+<p class="text-on-surface-variant leading-relaxed">All Niky Farm materials are sourced within a 200-mile radius. We prioritize low-embodied carbon concrete and reclaimed local timber in all landscape constructions.</p>
+</div>
+<div class="bg-tertiary-fixed-dim p-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-8xl text-primary">eco</span>
+</div>
+<div class="bg-primary p-12 text-on-primary flex flex-col justify-center">
+<p class="text-4xl font-headline font-black">100%</p>
+<p class="text-xs uppercase tracking-[0.2em] text-on-primary-container">Organic Components</p>
+</div>
+<div class="bg-surface-container-highest p-12 md:col-span-1">
+<h4 class="font-bold uppercase text-xs mb-4">Support</h4>
+<p class="text-sm">24/7 Biological monitoring available for commercial purifier installs.</p>
+</div>
+<div class="md:col-span-3 bg-surface overflow-hidden relative min-h-[300px]">
+<img alt="Landscape design overhead" class="w-full h-full object-cover" data-alt="Architectural top-down view of a modern garden with clean stone lines, square planting beds, and architectural ferns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWxphFC_0MZ6lhOXHe-pbLGli0WXUtRBugzP0UDdAt-AghmnwX0NEpDjleU5sSalkpFiyfGhG7xPbMKPB3_B4OXm7f4LoLidcyQI2LlGw0Nb8SiYzNLsVPdJHLDPpykIjxS2DlOZiUvGBk0OI8esDDYKETC1aHGZuJuXDGEG4-TYMszjqYXzBUlPZqsziQ4lXjMUhONBWE7J_S3wBAwlfa6xTPbMPKo7xVjuXD-Rh33oHd1h6lXit_hEzDvCnZ5FEU2wt-_8lf44k"/>
+<div class="absolute inset-0 bg-primary/10 flex items-end p-12">
+<p class="text-surface font-headline font-black text-3xl uppercase">Master Planning v.24</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#061b0e] text-[#f9f9f8] border-0">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8">
+<div class="font-epilogue font-black text-xl tracking-tighter">
+                NIKY FARM &amp; NURSERY
+            </div>
+<div class="flex gap-10">
+<a class="font-public-sans text-[10px] tracking-[0.2em] uppercase text-[#f9f9f8]/60 hover:text-[#e1bebe]" href="#">Sustainability</a>
+<a class="font-public-sans text-[10px] tracking-[0.2em] uppercase text-[#f9f9f8]/60 hover:text-[#e1bebe]" href="#">Privacy</a>
+<a class="font-public-sans text-[10px] tracking-[0.2em] uppercase text-[#f9f9f8]/60 hover:text-[#e1bebe]" href="#">Inquiries</a>
+</div>
+<div class="font-public-sans text-[10px] tracking-[0.2em] uppercase opacity-40">
+                © 2024 NIKY FARM &amp; NURSERY. ORGANIC BRUTALISM.
+            </div>
+</div>
+</footer>
+</body></html>
