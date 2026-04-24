@@ -63,10 +63,10 @@ module.exports = {
         "full": "9999px"
       },
       fontFamily: {
-        "headline": ["MuseoModerno", "Epilogue", "sans-serif"],
-        "body": ["Public Sans", "sans-serif"],
-        "label": ["Public Sans", "sans-serif"],
-        "brand": ["MuseoModerno", "sans-serif"]
+        "headline": ["Chillax", "sans-serif"],
+        "body": ["Synonym", "sans-serif"],
+        "label": ["Synonym", "sans-serif"],
+        "brand": ["Chillax", "sans-serif"]
       }
     },
   },

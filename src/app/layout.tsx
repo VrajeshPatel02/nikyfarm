@@ -5,15 +5,18 @@ import Footer from "@/components/Footer";
 import MobileNav from "@/components/MobileNav";
 
 export const metadata: Metadata = {
-  title: "Niky Farm Eco-Brutalist Platform",
+  title: "Niky Farm & Nursery — Premium Plants & Landscaping | Valsad, Gujarat",
   description:
-    "Expert botanical integration and physiological optimization through living structure. Keystone plantings for the modern environment.",
+    "Niky Farm & Nursery offers 500+ varieties of indoor, outdoor, and exotic plants along with professional landscaping services in Valsad, Gujarat. Visit us for quality plants and expert gardening advice.",
   keywords: [
-    "eco-brutalist",
-    "botanical integration",
-    "keystone plantings",
-    "air purifiers",
-    "edible container kits",
+    "plant nursery valsad",
+    "niky farm nursery",
+    "indoor plants gujarat",
+    "outdoor plants",
+    "garden landscaping",
+    "buy plants online",
+    "garden design valsad",
+    "nursery near me",
   ],
 };
 
@@ -28,11 +31,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&family=Public+Sans:wght@300;400;600&family=MuseoModerno:wght@700;900&display=swap"
+          href="https://api.fontshare.com/v2/css?f[]=chillax@600,700&f[]=synonym@400,500&display=swap"
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"
           rel="stylesheet"
         />
       </head>

@@ -5,10 +5,10 @@
 @layer base {
   body {
     @apply text-on-background bg-background;
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Synonym', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'MuseoModerno', 'Epilogue', sans-serif;
+    font-family: 'Chillax', sans-serif;
   }
 }
 

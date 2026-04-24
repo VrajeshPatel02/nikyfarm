@@ -1,172 +1,151 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServicesPage() {
   return (
     <div className="bg-surface-bright text-on-surface font-body selection:bg-tertiary-fixed-dim">
-      <main className="pt-32 uppercase">
-        {/* Hero Section */}
-        <section className="px-12 py-24 bg-surface">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
+      <main>
+        {/* Hero */}
+        <section className="relative h-[70vh] flex items-center px-8 md:px-12 overflow-hidden pt-20">
+          <div className="absolute inset-0 z-0">
+            <Image src="/images/garden-landscape.png" alt="Professional garden landscaping" fill className="object-cover brightness-[0.3]" priority />
+            <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
+          </div>
+          <div className="max-w-7xl mx-auto relative z-10 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-0 items-center">
               <div className="md:col-span-8">
-                <span className="bg-tertiary-fixed-dim text-primary px-3 py-1 font-bold text-xs uppercase tracking-[0.2em] mb-8 inline-block">Our Offerings</span>
-                <h1 className="text-[clamp(3.5rem,10vw,8rem)] leading-[0.85] font-headline font-black uppercase tracking-tighter mb-12">
-                  Cultivated<br />Systems.
+                <span className="bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 font-bold text-[10px] uppercase tracking-[0.25em] mb-8 inline-block">Our Services</span>
+                <h1 className="text-5xl md:text-[7rem] leading-[0.85] font-headline font-black uppercase tracking-tighter mb-4 text-white">
+                  Professional<br /><span className="text-tertiary-fixed-dim">Green Services</span>
                 </h1>
               </div>
               <div className="md:col-span-4 flex flex-col justify-end pb-4">
-                <p className="text-body-md text-on-surface-variant leading-relaxed mb-8 border-l-4 border-primary pl-6 normal-case font-light">
-                  Bridging the gap between architectural rigidity and biological fluidness. Our services provide functional, sustainable ecosystems for modern living.
+                <p className="text-white/70 leading-relaxed border-l-4 border-tertiary-fixed-dim pl-6 text-sm">
+                  From garden design to terrace setups and ongoing maintenance — we help you create and sustain beautiful green spaces.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Main Services Grid */}
         <section className="bg-surface-container py-2">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
-            {/* Service 01: Indoor Air Purifiers */}
-            <div className="bg-surface p-12 flex flex-col justify-between min-h-[700px] border-b lg:border-b-0 lg:border-r border-outline-variant/20">
+            {/* Service 01 */}
+            <div className="bg-surface p-10 md:p-12 flex flex-col justify-between min-h-[650px] border-r border-outline-variant/20">
               <div>
-                <div className="flex justify-between items-start mb-16">
-                  <span className="text-6xl font-headline font-black text-outline-variant/30 italic">01</span>
-                  <span className="material-symbols-outlined text-4xl text-primary">filter_vintage</span>
+                <div className="flex justify-between items-start mb-12">
+                  <span className="text-6xl font-headline font-black text-outline-variant/30">01</span>
+                  <span className="material-symbols-outlined text-4xl text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>yard</span>
                 </div>
-                <h2 className="text-4xl font-headline font-black uppercase tracking-tight mb-6">Indoor Air Purifiers</h2>
-                <p className="text-on-surface-variant mb-12 leading-relaxed normal-case font-light">
-                  Botanical integration for the built environment. High-oxygen output systems designed as permanent structural elements.
+                <h2 className="text-3xl font-headline font-black uppercase tracking-tight mb-4">Garden Design &amp; Landscaping</h2>
+                <p className="text-on-surface-variant mb-8 leading-relaxed text-sm">
+                  Transform your outdoor space into a stunning garden. We design custom layouts for homes, villas, farmhouses, and commercial properties with the right plant selection for your climate and soil.
                 </p>
-                <ul className="space-y-4 mb-16">
-                  <li className="flex items-center gap-3 font-bold text-xs uppercase tracking-widest"><span className="w-2 h-2 bg-tertiary-fixed-dim"></span> NASA-Grade Species</li>
-                  <li className="flex items-center gap-3 font-bold text-xs uppercase tracking-widest"><span className="w-2 h-2 bg-tertiary-fixed-dim"></span> Hydro-Logic Feeding</li>
-                  <li className="flex items-center gap-3 font-bold text-xs uppercase tracking-widest"><span className="w-2 h-2 bg-tertiary-fixed-dim"></span> Integrated Lighting</li>
+                <ul className="space-y-3 mb-12">
+                  {["Custom Garden Layouts", "Plant Selection Guidance", "Hardscaping & Pathways", "Water Features & Lighting"].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 font-bold text-xs uppercase tracking-widest">
+                      <span className="w-2 h-2 bg-tertiary-fixed-dim" />{item}
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <div>
-                <div className="mb-8">
-                  <p className="text-xs uppercase tracking-widest text-outline mb-1">Standard Unit</p>
-                  <p className="text-3xl font-headline font-black">$1,200.00</p>
-                </div>
-                <button className="w-full bg-primary text-on-primary py-5 font-black uppercase tracking-tighter hover:bg-tertiary-fixed-dim hover:text-primary transition-none">
-                  Acquire System
-                </button>
-              </div>
+              <Link href="/contact" className="w-full block text-center bg-primary text-on-primary py-5 font-black uppercase tracking-widest text-sm hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-all">
+                Get a Quote
+              </Link>
             </div>
 
-            {/* Service 02: Edible Container Kits */}
-            <div className="bg-surface-container-high p-12 flex flex-col justify-between min-h-[700px] border-b lg:border-b-0 lg:border-r border-outline-variant/20">
+            {/* Service 02 */}
+            <div className="bg-surface-container-high p-10 md:p-12 flex flex-col justify-between min-h-[650px] border-r border-outline-variant/20">
               <div>
-                <div className="flex justify-between items-start mb-16">
-                  <span className="text-6xl font-headline font-black text-outline-variant/30 italic">02</span>
-                  <span className="material-symbols-outlined text-4xl text-primary">potted_plant</span>
+                <div className="flex justify-between items-start mb-12">
+                  <span className="text-6xl font-headline font-black text-outline-variant/30">02</span>
+                  <span className="material-symbols-outlined text-4xl text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
                 </div>
-                <h2 className="text-4xl font-headline font-black uppercase tracking-tight mb-6">Edible Container Kits</h2>
-                <p className="text-on-surface-variant mb-12 leading-relaxed normal-case font-light">
-                  Modular agricultural systems for the urban enthusiast. Brutalist concrete vessels paired with nutrient-dense soil profiles.
+                <h2 className="text-3xl font-headline font-black uppercase tracking-tight mb-4">Terrace &amp; Balcony Gardens</h2>
+                <p className="text-on-surface-variant mb-8 leading-relaxed text-sm">
+                  No backyard? No problem. We create beautiful terrace and balcony gardens with raised beds, container setups, drip irrigation, and waterproofing consultation.
                 </p>
-                <div className="mb-12 h-64 w-full bg-primary relative overflow-hidden group">
-                  <Image 
-                    alt="Modern concrete planters" 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaOKQDP0znMWl9KcHMVK-Bt5390dF7gCKxg8vGslPh0Zb7rHdvfvatbHp_rFA6ftxsGP1iypmiAAMpuu97BYewOwV7NEpD71FjQf9lvyrpeWJDDVHwm30wUliy4EyUCkw60XxWbtkeCBwiykjJ8r-GVNC31BtIs597nLzk-ASOEbG52w6lutHhxnwwizg6DNpzjRcQS_3ZLkTlYTB6AAdoqhFYjYgyMcfU_BMkWFdc9WNIK4_JM6cyKXEzR61Ka90WoqQlTMe2RlE"
-                    fill
-                    className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-primary/20"></div>
+                <div className="mb-12 h-48 w-full bg-primary relative overflow-hidden">
+                  <Image src="/images/garden-consultant.png" alt="Terrace garden setup" fill className="object-cover opacity-80" />
                 </div>
               </div>
-              <div>
-                <div className="mb-8">
-                  <p className="text-xs uppercase tracking-widest text-outline mb-1">Modular Kit</p>
-                  <p className="text-3xl font-headline font-black">$450.00</p>
-                </div>
-                <button className="w-full bg-primary text-on-primary py-5 font-black uppercase tracking-tighter hover:bg-tertiary-fixed-dim hover:text-primary transition-none">
-                  View Modules
-                </button>
-              </div>
+              <Link href="/contact" className="w-full block text-center bg-primary text-on-primary py-5 font-black uppercase tracking-widest text-sm hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-all">
+                Plan My Terrace
+              </Link>
             </div>
 
-            {/* Service 03: Professional Landscapes */}
-            <div className="bg-primary p-12 flex flex-col justify-between min-h-[700px] text-on-primary">
+            {/* Service 03 */}
+            <div className="bg-primary p-10 md:p-12 flex flex-col justify-between min-h-[650px] text-on-primary">
               <div>
-                <div className="flex justify-between items-start mb-16">
-                  <span className="text-6xl font-headline font-black text-on-primary-container/20 italic">03</span>
-                  <span className="material-symbols-outlined text-4xl text-tertiary-fixed-dim">architecture</span>
+                <div className="flex justify-between items-start mb-12">
+                  <span className="text-6xl font-headline font-black text-on-primary-container/20">03</span>
+                  <span className="material-symbols-outlined text-4xl text-tertiary-fixed-dim" style={{ fontVariationSettings: "'FILL' 1" }}>park</span>
                 </div>
-                <h2 className="text-4xl font-headline font-black uppercase tracking-tight mb-6">Landscape Services</h2>
-                <p className="text-on-primary-container mb-12 leading-relaxed normal-case font-light">
-                  Eco-brutalist master planning. We design landscapes that function as living monoliths—structured, raw, and self-sustaining.
+                <h2 className="text-3xl font-headline font-black uppercase tracking-tight mb-4">Garden Maintenance</h2>
+                <p className="text-on-primary-container mb-8 leading-relaxed text-sm">
+                  Keep your garden beautiful year-round with our professional maintenance packages. Pruning, fertilizing, pest control, and seasonal replanting handled by our expert team.
                 </p>
-                <div className="space-y-6">
-                  <div className="border-b border-on-primary-container/20 pb-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim mb-2">Phase 01</p>
-                    <p className="font-bold normal-case">Site Analysis & Soil Mapping</p>
-                  </div>
-                  <div className="border-b border-on-primary-container/20 pb-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim mb-2">Phase 02</p>
-                    <p className="font-bold normal-case">Brutalist Structural Design</p>
-                  </div>
-                  <div className="border-b border-on-primary-container/20 pb-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim mb-2">Phase 03</p>
-                    <p className="font-bold normal-case">Biological Implementation</p>
-                  </div>
+                <div className="space-y-4">
+                  {[
+                    { phase: "Monthly", desc: "Regular pruning, watering check, fertilizing" },
+                    { phase: "Quarterly", desc: "Deep soil treatment, pest control, seasonal changes" },
+                    { phase: "Annual", desc: "Complete garden refresh, replanting, health audit" },
+                  ].map((item, i) => (
+                    <div key={i} className="border-b border-on-primary-container/20 pb-3">
+                      <p className="text-xs uppercase tracking-[0.2em] text-tertiary-fixed-dim mb-1">{item.phase}</p>
+                      <p className="font-medium text-sm">{item.desc}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className="mt-12">
-                <button className="w-full bg-surface text-primary py-5 font-black uppercase tracking-tighter hover:bg-tertiary-fixed-dim transition-none">
-                  Request Inquiry
-                </button>
-              </div>
+              <Link href="/contact" className="w-full block text-center mt-8 bg-surface text-primary py-5 font-black uppercase tracking-widest text-sm hover:bg-tertiary-fixed-dim transition-all">
+                Enquire Now
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Quote/Callout Section */}
-        <section className="bg-primary py-32 px-12 overflow-hidden relative">
-          <div className="absolute right-[-10%] top-0 opacity-10 pointer-events-none">
-            <span className="text-[25rem] font-headline font-black uppercase tracking-tighter text-on-primary">FERTILE</span>
-          </div>
-          <div className="max-w-5xl mx-auto relative z-10 text-center">
-            <h2 className="text-5xl md:text-7xl font-headline font-black text-on-primary uppercase tracking-tighter mb-12">
-              WE DON'T JUST PLANT.<br />WE CONSTRUCT <span className="text-tertiary-fixed-dim">LIFE</span>.
-            </h2>
-            <div className="flex flex-wrap justify-center gap-6">
-              <a className="border-b-2 border-tertiary-fixed-dim text-tertiary-fixed-dim font-bold uppercase tracking-widest text-sm py-2 hover:bg-tertiary-fixed-dim hover:text-primary px-4 transition-none" href="#">Download Manifesto</a>
-              <a className="border-b-2 border-tertiary-fixed-dim text-tertiary-fixed-dim font-bold uppercase tracking-widest text-sm py-2 hover:bg-tertiary-fixed-dim hover:text-primary px-4 transition-none" href="#">Our Process</a>
-            </div>
-          </div>
-        </section>
-
-        {/* Technical Specs / Bento Grid */}
-        <section className="bg-surface-container py-24 px-12">
+        {/* Additional Services */}
+        <section className="bg-background py-24 px-8 md:px-12">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div className="md:col-span-2 bg-surface p-12">
-                <h3 className="font-headline font-black text-2xl uppercase mb-6">Sustainable Ethics</h3>
-                <p className="text-on-surface-variant leading-relaxed normal-case font-light">All Niky Farm materials are sourced within a 200-mile radius. We prioritize low-embodied carbon concrete and reclaimed local timber in all landscape constructions.</p>
-              </div>
-              <div className="bg-tertiary-fixed-dim p-12 flex items-center justify-center">
-                <span className="material-symbols-outlined text-8xl text-primary">eco</span>
-              </div>
-              <div className="bg-primary p-12 text-on-primary flex flex-col justify-center">
-                <p className="text-4xl font-headline font-black">100%</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-on-primary-container">Organic Components</p>
-              </div>
-              <div className="bg-surface-container-highest p-12 md:col-span-1">
-                <h4 className="font-bold uppercase text-xs mb-4">Support</h4>
-                <p className="text-sm normal-case font-light">24/7 Biological monitoring available for commercial purifier installs.</p>
-              </div>
-              <div className="md:col-span-3 bg-surface overflow-hidden relative min-h-[300px]">
-                <Image 
-                  alt="Landscape design overhead" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWxphFC_0MZ6lhOXHe-pbLGli0WXUtRBugzP0UDdAt-AghmnwX0NEpDjleU5sSalkpFiyfGhG7xPbMKPB3_B4OXm7f4LoLidcyQI2LlGw0Nb8SiYzNLsVPdJHLDPpykIjxS2DlOZiUvGBk0OI8esDDYKETC1aHGZuJuXDGEG4-TYMszjqYXzBUlPZqsziQ4lXjMUhONBWE7J_S3wBAwlfa6xTPbMPKo7xVjuXD-Rh33oHd1h6lXit_hEzDvCnZ5FEU2wt-_8lf44k"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-primary/10 flex items-end p-12">
-                  <p className="text-surface font-headline font-black text-3xl uppercase">Master Planning v.24</p>
+            <div className="mb-16">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">Also Available</span>
+              <h2 className="text-4xl md:text-5xl font-headline font-black uppercase tracking-tighter">More Services</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: "potted_plant", title: "Corporate Green", desc: "Office plants, green walls, and reception décor with rental and maintenance options." },
+                { icon: "water_drop", title: "Drip Irrigation", desc: "Automated drip irrigation installation for gardens, terraces, and farms — save water and time." },
+                { icon: "compost", title: "Organic Supplies", desc: "Premium vermicompost, neem cake, cocopeat, and gardening tools available in-store." },
+                { icon: "school", title: "Garden Workshops", desc: "Learn gardening basics, composting, and plant care through our seasonal hands-on workshops." },
+              ].map((svc, i) => (
+                <div key={i} className="p-8 bg-surface-container border border-outline-variant/20 hover:border-primary/30 transition-colors group">
+                  <span className="material-symbols-outlined text-3xl text-primary mb-6 block group-hover:scale-110 transition-transform origin-left" style={{ fontVariationSettings: "'FILL' 1" }}>{svc.icon}</span>
+                  <h4 className="text-sm font-black uppercase tracking-wider mb-3 font-headline">{svc.title}</h4>
+                  <p className="text-xs leading-relaxed text-on-surface-variant">{svc.desc}</p>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-primary text-white py-24 px-8 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter mb-6 uppercase">
+              Let&apos;s Build Your<br /><span className="text-tertiary-fixed-dim">Dream Garden</span>
+            </h2>
+            <p className="text-white/60 mb-10 max-w-lg mx-auto text-sm">
+              Whether it&apos;s a small balcony makeover or a complete landscape transformation, our team is ready to help bring your vision to life.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="bg-white text-primary font-headline font-black uppercase px-10 py-5 text-sm tracking-widest hover:bg-tertiary-fixed-dim transition-all">
+                Contact Us
+              </Link>
+              <Link href="/shop" className="border-2 border-white text-white font-headline font-bold uppercase px-10 py-5 text-sm tracking-widest hover:bg-white hover:text-primary transition-all">
+                Browse Plants
+              </Link>
             </div>
           </div>
         </section>
