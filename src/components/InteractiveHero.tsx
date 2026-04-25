@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
@@ -56,7 +57,6 @@ export default function InteractiveHero() {
           priority
         />
         <div className="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
       </motion.div>
 
       {/* Fidgetable Biological Nodes */}

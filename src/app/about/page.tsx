@@ -8,7 +8,7 @@ export default function AboutPage() {
         {/* ═══════════════════════════════════════════
             HERO — WHO WE ARE
         ═══════════════════════════════════════════ */}
-        <section className="relative h-screen flex flex-col justify-center px-8 md:px-16 overflow-hidden pt-20">
+        <section className="relative min-h-[90vh] flex flex-col justify-center px-6 sm:px-12 md:px-20 overflow-hidden pt-32 pb-16">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/nursery-grounds.png"
@@ -18,49 +18,52 @@ export default function AboutPage() {
               priority
             />
             <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface-bright via-transparent to-transparent opacity-30" />
           </div>
 
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-            <div className="md:col-span-9">
-              <span className="inline-block bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] mb-8">
-                About Niky Farm
-              </span>
-              <h1 className="font-headline font-black text-5xl md:text-[8rem] leading-[0.85] text-white tracking-tighter mb-8 uppercase">
-                Our<br />
-                <span className="text-tertiary-fixed-dim">Story.</span>
-              </h1>
-              <p className="max-w-2xl text-lg md:text-xl text-white/70 leading-relaxed">
-                A family-run plant nursery near Valsad, Gujarat — growing with love,
-                rooted in passion, and dedicated to bringing nature closer to every home.
-              </p>
-            </div>
-            <div className="hidden md:flex md:col-span-3 justify-end">
-              <span className="[writing-mode:vertical-rl] [text-orientation:mixed] font-headline font-black text-7xl text-white/5 select-none tracking-widest uppercase">
-                VALSAD
-              </span>
+          <div className="max-w-7xl mx-auto w-full relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+              <div className="md:col-span-9">
+                <span className="inline-block bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] mb-6">
+                  About Niky Farm
+                </span>
+                <h1 className="font-headline font-black text-4xl sm:text-6xl md:text-[8rem] leading-[0.85] text-white tracking-tighter mb-6 uppercase">
+                  Our<br />
+                  <span className="text-tertiary-fixed-dim">Story.</span>
+                </h1>
+                <p className="max-w-2xl text-base sm:text-lg md:text-xl text-white/70 leading-relaxed">
+                  A family-run plant nursery near Valsad, Gujarat — growing with love,
+                  rooted in passion, and dedicated to bringing nature closer to every home.
+                </p>
+              </div>
+              <div className="hidden md:flex md:col-span-3 justify-end">
+                <span className="[writing-mode:vertical-rl] [text-orientation:mixed] font-headline font-black text-7xl text-white/5 select-none tracking-widest uppercase">
+                  VALSAD
+                </span>
+              </div>
             </div>
           </div>
 
           {/* Mission Cards */}
-          <div className="relative z-10 mt-16 grid grid-cols-1 md:grid-cols-3 border-t-2 border-primary">
-            <div className="p-8 bg-primary text-white border-r border-white/10">
-              <span className="font-headline font-bold text-xs tracking-widest block mb-4 uppercase">Our Mission</span>
-              <p className="text-base font-light">
-                To make quality plants accessible to every household and nurture a greener Gujarat, one garden at a time.
-              </p>
-            </div>
-            <div className="p-8 bg-primary-container text-on-primary-container border-r border-white/10">
-              <span className="font-headline font-bold text-xs tracking-widest block mb-4 uppercase">Our Promise</span>
-              <p className="text-base font-light">
-                Every plant leaves our nursery healthy, well-rooted, and ready to thrive in your home or garden.
-              </p>
-            </div>
-            <div className="p-8 bg-tertiary-container text-tertiary-fixed-dim">
-              <span className="font-headline font-bold text-xs tracking-widest block mb-4 uppercase">Our Values</span>
-              <p className="text-base font-light">
+          <div className="max-w-7xl mx-auto w-full relative z-10 mt-12 sm:mt-20">
+            <div className="grid grid-cols-1 sm:grid-cols-3 border-t-2 border-primary">
+              <div className="p-8 sm:p-10 bg-primary text-white border-r border-white/10">
+                <span className="font-headline font-bold text-xs tracking-widest block mb-4 uppercase">Our Mission</span>
+                <p className="text-base font-light">
+                  To make quality plants accessible to every household and nurture a greener Gujarat, one garden at a time.
+                </p>
+              </div>
+              <div className="p-8 sm:p-10 bg-primary-container text-on-primary-container border-r border-white/10">
+                <span className="font-headline font-bold text-xs tracking-widest block mb-4 uppercase">Our Promise</span>
+                <p className="text-base font-light">
+                  Every plant leaves our nursery healthy, well-rooted, and ready to thrive in your home or garden.
+                </p>
+              </div>
+              <div className="p-8 sm:p-10 bg-tertiary-container text-tertiary-fixed-dim">
+                <span className="font-headline font-bold text-xs tracking-widest block mb-4 uppercase">Our Values</span>
+                <p className="text-base font-light">
                 100% organic growing practices. No chemical fertilizers. Sustainable and earth-friendly from seed to sale.
-              </p>
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -68,7 +71,7 @@ export default function AboutPage() {
         {/* ═══════════════════════════════════════════
             OUR JOURNEY
         ═══════════════════════════════════════════ */}
-        <section className="bg-surface-container py-24 px-8 md:px-12">
+        <section className="bg-surface-container py-16 sm:py-24 px-6 sm:px-12 md:px-20">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">
@@ -124,7 +127,7 @@ export default function AboutPage() {
         {/* ═══════════════════════════════════════════
             HOW WE GROW — PROCESS
         ═══════════════════════════════════════════ */}
-        <section className="bg-background py-24 px-8 md:px-12">
+        <section className="bg-background py-16 sm:py-24 px-6 sm:px-12 md:px-20">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">
@@ -191,7 +194,7 @@ export default function AboutPage() {
         {/* ═══════════════════════════════════════════
             WHY CHOOSE US
         ═══════════════════════════════════════════ */}
-        <section className="bg-surface-container-high py-24 px-8 md:px-12">
+        <section className="bg-surface-container-high py-24 px-6 sm:px-12 md:px-20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">
@@ -258,7 +261,7 @@ export default function AboutPage() {
         {/* ═══════════════════════════════════════════
             STATS BANNER
         ═══════════════════════════════════════════ */}
-        <section className="bg-primary text-white py-20 px-8">
+        <section className="bg-primary text-white py-20 px-6 sm:px-12 md:px-20">
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { value: "500+", label: "Plant Varieties" },
@@ -279,7 +282,7 @@ export default function AboutPage() {
         {/* ═══════════════════════════════════════════
             CTA SECTION
         ═══════════════════════════════════════════ */}
-        <section className="relative py-24 px-8 overflow-hidden">
+        <section className="relative py-24 px-6 sm:px-12 md:px-20 overflow-hidden">
           <div className="absolute inset-0">
             <Image
               src="/images/garden-landscape.png"

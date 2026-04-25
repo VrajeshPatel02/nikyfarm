@@ -6,16 +6,16 @@ export default function ServicesPage() {
     <div className="bg-surface-bright text-on-surface font-body selection:bg-tertiary-fixed-dim">
       <main>
         {/* Hero */}
-        <section className="relative h-[70vh] flex items-center px-8 md:px-12 overflow-hidden pt-20">
+        <section className="relative min-h-[70vh] flex items-center px-6 sm:px-12 md:px-20 overflow-hidden pt-32 pb-16">
           <div className="absolute inset-0 z-0">
             <Image src="/images/garden-landscape.png" alt="Professional garden landscaping" fill className="object-cover brightness-[0.3]" priority />
             <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
           </div>
           <div className="max-w-7xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-0 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
               <div className="md:col-span-8">
-                <span className="bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 font-bold text-[10px] uppercase tracking-[0.25em] mb-8 inline-block">Our Services</span>
-                <h1 className="text-5xl md:text-[7rem] leading-[0.85] font-headline font-black uppercase tracking-tighter mb-4 text-white">
+                <span className="bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 font-bold text-[10px] uppercase tracking-[0.25em] mb-6 inline-block">Our Services</span>
+                <h1 className="text-4xl sm:text-5xl md:text-[7rem] leading-[0.85] font-headline font-black uppercase tracking-tighter mb-4 text-white">
                   Professional<br /><span className="text-tertiary-fixed-dim">Green Services</span>
                 </h1>
               </div>
@@ -29,7 +29,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Main Services Grid */}
-        <section className="bg-surface-container py-2">
+        <section className="bg-surface-container py-2 px-6 sm:px-12 md:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
             {/* Service 01 */}
             <div className="bg-surface p-10 md:p-12 flex flex-col justify-between min-h-[650px] border-r border-outline-variant/20">
@@ -107,7 +107,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Additional Services */}
-        <section className="bg-background py-24 px-8 md:px-12">
+        <section className="bg-background py-16 sm:py-24 px-6 sm:px-12 md:px-20">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">Also Available</span>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-primary text-white py-24 px-8 text-center">
+        <section className="bg-primary text-white py-24 px-6 sm:px-12 md:px-20 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter mb-6 uppercase">
               Let&apos;s Build Your<br /><span className="text-tertiary-fixed-dim">Dream Garden</span>

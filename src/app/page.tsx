@@ -85,7 +85,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════ */}
-      <section className="relative h-screen flex items-center px-8 md:px-16 overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center px-6 sm:px-12 md:px-20 overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/nursery-grounds.png"
@@ -95,41 +95,42 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-70" />
         </div>
 
-        <div className="relative z-10 max-w-5xl">
-          <span className="inline-block bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] mb-6">
+        <div className="relative z-10 max-w-5xl w-full">
+          <span className="inline-block bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] mb-5">
             Valsad&apos;s Favourite Plant Nursery
           </span>
 
-          <h1 className="text-5xl sm:text-7xl md:text-[8rem] font-black text-white leading-[0.9] tracking-tighter mb-6 uppercase font-headline">
+          <h1 className="text-4xl sm:text-6xl md:text-[8rem] font-black text-white leading-[0.9] tracking-tighter mb-5 uppercase font-headline">
             Niky Farm<br />
             <span className="text-tertiary-fixed-dim">&amp; Nursery</span>
           </h1>
 
-          <p className="text-white/70 text-base md:text-lg max-w-xl mb-10 font-body leading-relaxed">
+          <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-xl mb-8 font-body leading-relaxed">
             Over 500 varieties of indoor, outdoor, and exotic plants. Expert landscaping services.
             Trusted by plant lovers across Gujarat since day one.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link
               href="/shop"
-              className="group bg-primary text-on-primary px-10 py-5 font-black uppercase tracking-widest text-sm hover:bg-white hover:text-primary transition-all flex items-center gap-4 border border-white/10 relative overflow-hidden"
+              aria-label="Shop Plants — browse our collection"
+              className="group bg-primary text-on-primary px-8 py-4 sm:px-10 sm:py-5 font-black uppercase tracking-widest text-sm hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-4 border border-white/10 relative overflow-hidden"
             >
               <span className="relative z-10">Shop Plants</span>
-              <span className="material-symbols-outlined relative z-10 group-hover:translate-x-2 transition-transform duration-300">
+              <span className="material-symbols-outlined relative z-10 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true">
                 arrow_forward
               </span>
-              <div className="absolute inset-0 bg-tertiary-fixed-dim translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-tertiary-fixed-dim translate-y-full group-hover:translate-y-0 transition-transform duration-300" aria-hidden="true" />
             </Link>
             <Link
               href="/contact"
-              className="group px-10 py-5 font-bold uppercase tracking-widest text-sm text-white border border-white/30 hover:bg-white hover:text-primary transition-all flex items-center gap-4"
+              aria-label="Visit our nursery — get directions"
+              className="group px-8 py-4 sm:px-10 sm:py-5 font-bold uppercase tracking-widest text-sm text-white border border-white/30 hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-4"
             >
               <span>Visit Nursery</span>
-              <span className="material-symbols-outlined">location_on</span>
+              <span className="material-symbols-outlined" aria-hidden="true">location_on</span>
             </Link>
           </div>
         </div>
@@ -144,13 +145,14 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           WHY CHOOSE US — FEATURE STRIP
       ═══════════════════════════════════════════ */}
-      <section className="bg-primary text-background py-6 px-8 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
+      <section className="bg-primary text-background py-8 px-6 sm:px-12 md:px-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 md:gap-12">
           {features.map((f, i) => (
-            <div key={i} className="flex items-start gap-3 py-4">
+            <div key={i} className="flex items-start gap-3 py-2">
               <span
                 className="material-symbols-outlined text-tertiary-fixed-dim text-2xl flex-shrink-0 mt-0.5"
                 style={{ fontVariationSettings: "'FILL' 1" }}
+                aria-hidden="true"
               >
                 {f.icon}
               </span>
@@ -166,10 +168,10 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           PLANT CATEGORIES
       ═══════════════════════════════════════════ */}
-      <section className="py-24 px-8 bg-background">
-        <div className="max-w-7xl mx-auto mb-16">
+      <section className="py-16 sm:py-24 px-6 sm:px-12 md:px-20 bg-background">
+        <div className="max-w-7xl mx-auto mb-10 sm:mb-16">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">What We Offer</span>
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter font-headline">
+          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter font-headline">
             Explore Our Collection
           </h2>
         </div>
@@ -178,13 +180,14 @@ export default function Home() {
           {plantCategories.map((cat) => (
             <div
               key={cat.id}
-              className={`group relative aspect-square overflow-hidden p-10 md:p-12 flex flex-col justify-between border-r border-b border-outline-variant/20 ${cat.accent ? "bg-primary text-background" : "bg-surface-container"
+              className={`group relative min-h-[280px] sm:aspect-square overflow-hidden p-8 sm:p-10 md:p-12 flex flex-col justify-between border-r border-b border-outline-variant/20 ${cat.accent ? "bg-primary text-background" : "bg-surface-container"
                 }`}
             >
               <Image
                 src={cat.img}
-                alt={cat.title}
+                alt=""
                 fill
+                aria-hidden="true"
                 className={`object-cover transition-all duration-500 ${cat.accent
                     ? "opacity-20 group-hover:opacity-35 grayscale"
                     : "opacity-10 group-hover:opacity-25 grayscale"
@@ -193,6 +196,7 @@ export default function Home() {
               <span
                 className={`font-black text-5xl uppercase tracking-tighter relative z-10 ${cat.accent ? "text-background/40" : "text-primary/30"
                   }`}
+                aria-hidden="true"
               >
                 {cat.id}
               </span>
@@ -201,13 +205,14 @@ export default function Home() {
                   {cat.title}
                 </h3>
                 <p
-                  className={`text-sm max-w-xs mb-6 font-body leading-relaxed ${cat.accent ? "text-background/70" : "text-on-surface-variant"
+                  className={`text-sm max-w-xs mb-5 font-body leading-relaxed ${cat.accent ? "text-background/70" : "text-on-surface-variant"
                     }`}
                 >
                   {cat.desc}
                 </p>
                 <Link
                   href={cat.link}
+                  aria-label={`${cat.linkText} — ${cat.title}`}
                   className={`text-xs font-bold uppercase tracking-widest pb-1 inline-block border-b-2 ${cat.accent ? "border-background" : "border-primary"
                     }`}
                 >
@@ -222,7 +227,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           ABOUT / STORY SECTION
       ═══════════════════════════════════════════ */}
-      <section className="bg-surface-container py-24 px-8">
+      <section className="bg-surface-container py-24 px-6 sm:px-12 md:px-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
           <div className="flex-1">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">
@@ -289,14 +294,14 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           BEST SELLERS
       ═══════════════════════════════════════════ */}
-      <section className="py-24 px-8 bg-background">
+      <section className="py-16 sm:py-24 px-6 sm:px-12 md:px-20 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 sm:mb-16 gap-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">
                 Popular Picks
               </span>
-              <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter font-headline">
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter font-headline">
                 Best Sellers
               </h2>
             </div>
@@ -322,14 +327,17 @@ export default function Home() {
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-5">
-                  <h4 className="text-sm font-bold uppercase tracking-tight mb-1 font-headline">
+                <div className="p-3 sm:p-5">
+                  <h4 className="text-xs sm:text-sm font-bold uppercase tracking-tight mb-1 font-headline line-clamp-2">
                     {plant.name}
                   </h4>
                   <div className="flex items-center justify-between">
-                    <span className="text-primary font-black text-lg font-headline">{plant.price}</span>
-                    <button className="w-8 h-8 bg-primary text-on-primary flex items-center justify-center hover:bg-tertiary-fixed-dim transition-colors">
-                      <span className="material-symbols-outlined text-sm">add</span>
+                    <span className="text-primary font-black text-base sm:text-lg font-headline">{plant.price}</span>
+                    <button
+                      aria-label={`Add ${plant.name} to cart`}
+                      className="w-8 h-8 bg-primary text-on-primary flex items-center justify-center hover:bg-tertiary-fixed-dim transition-colors"
+                    >
+                      <span className="material-symbols-outlined text-sm" aria-hidden="true">add</span>
                     </button>
                   </div>
                 </div>
@@ -342,7 +350,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           SERVICES HIGHLIGHT
       ═══════════════════════════════════════════ */}
-      <section className="py-24 px-8 bg-surface-container-high">
+      <section className="py-24 sm:py-32 px-6 sm:px-12 md:px-20 bg-surface-container relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">
@@ -409,7 +417,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           TESTIMONIALS
       ═══════════════════════════════════════════ */}
-      <section className="py-24 px-8 bg-background">
+      <section className="py-24 sm:py-32 px-6 sm:px-12 md:px-20 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">
@@ -458,7 +466,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           VISIT US — MAP SECTION
       ═══════════════════════════════════════════ */}
-      <section className="py-24 px-8 bg-surface-container">
+      <section className="py-24 px-6 sm:px-12 md:px-20 bg-surface-container">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-16">
             <div className="flex-1 flex flex-col justify-center">
@@ -549,7 +557,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           FINAL CTA BANNER
       ═══════════════════════════════════════════ */}
-      <section className="relative py-24 px-8 overflow-hidden">
+      <section className="relative py-24 px-6 sm:px-12 md:px-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/garden-landscape.png"

@@ -3,12 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    /* Smooth scroll and better mobile font rendering */
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
   body {
     @apply text-on-background bg-background;
     font-family: 'Synonym', sans-serif;
+    /* Remove tap highlight on mobile */
+    -webkit-tap-highlight-color: transparent;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Chillax', sans-serif;
+  }
+  /* Better focus rings for keyboard accessibility */
+  :focus-visible {
+    @apply outline-2 outline-primary outline-offset-2;
   }
 }
 
@@ -16,6 +27,17 @@
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     @apply inline-block align-middle;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar while keeping scroll functionality */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }
 

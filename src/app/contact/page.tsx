@@ -6,12 +6,12 @@ export default function ContactPage() {
       <main className="min-h-screen">
         <section className="flex flex-col md:flex-row min-h-screen pt-20 overflow-hidden">
           {/* Left: Contact Information */}
-          <div className="w-full md:w-5/12 bg-surface-container flex flex-col p-8 md:p-16 justify-between">
+          <div className="w-full md:w-5/12 bg-surface-container flex flex-col px-8 sm:px-12 md:px-20 py-16 justify-between min-h-[50vh] md:min-h-0">
             <div>
               <span className="inline-block bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] mb-8">
                 Get In Touch
               </span>
-              <h1 className="font-headline font-black text-5xl md:text-7xl text-primary leading-none tracking-tighter uppercase mb-12">
+              <h1 className="font-headline font-black text-4xl sm:text-5xl md:text-7xl text-primary leading-none tracking-tighter uppercase mb-8 sm:mb-12">
                 Contact<br /><span className="text-primary/50">Us.</span>
               </h1>
               <div className="space-y-10 max-w-sm">
@@ -46,7 +46,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right: Contact Form */}
-          <div className="w-full md:w-7/12 bg-surface-bright p-8 md:p-16 lg:p-24 flex flex-col">
+          <div className="w-full md:w-7/12 bg-surface-bright px-8 sm:px-12 md:px-20 py-16 flex flex-col">
             <div className="mb-12">
               <h2 className="font-headline font-black text-3xl uppercase tracking-tighter text-primary">Send Us a Message</h2>
               <div className="w-24 h-1 bg-primary mt-2" />
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 <label className="block text-[10px] tracking-[0.2em] uppercase text-outline mb-2 font-bold">Your Message</label>
                 <textarea className="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 px-0 py-3 text-base placeholder:text-outline-variant resize-none" placeholder="Tell us about your requirements..." rows={4} />
               </div>
-              <button className="bg-primary text-on-primary font-headline font-black text-base px-10 py-5 uppercase tracking-widest hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-all flex items-center gap-3 group" type="submit">
+              <button className="w-full sm:w-auto bg-primary text-on-primary font-headline font-black text-sm px-10 py-5 uppercase tracking-widest hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-all flex items-center justify-center gap-3 group" type="submit">
                 Send Message
                 <span className="material-symbols-outlined text-xl group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
               </button>
@@ -91,20 +91,20 @@ export default function ContactPage() {
         </section>
 
         {/* Google Maps */}
-        <section className="bg-background py-24 px-8">
+        <section className="relative py-24 px-6 sm:px-12 md:px-20 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary/50 font-body block mb-3">Find Us</span>
               <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter font-headline">Visit Our Nursery</h2>
             </div>
-            <div className="w-full aspect-[16/7] bg-surface-container border border-outline-variant/20 overflow-hidden">
+            <div className="w-full aspect-[4/3] sm:aspect-[16/7] bg-surface-container border border-outline-variant/20 overflow-hidden">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.381872605818!2d72.89379207493292!3d20.284454812926754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0d3d08ef9b9d3%3A0xa7994e829350e1c3!2sNiky%20Garden%20Nursery!5e0!3m2!1sen!2sin!4v1777050886594!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Niky Garden Nursery Location" />
             </div>
           </div>
         </section>
 
         {/* Info Blocks */}
-        <section className="bg-primary-container py-16 px-8 md:px-12">
+        <section className="bg-primary-container py-16 px-6 sm:px-12 md:px-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-1">
             {[
               { icon: "local_florist", title: "Walk-In Welcome", desc: "No appointment needed! Browse our full collection anytime during opening hours." },
