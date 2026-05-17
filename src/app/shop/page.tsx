@@ -94,7 +94,18 @@ const plants = [
   },
 ];
 
-export default function Shop() {
+export default function Shop({ searchParams }: { searchParams?: { q?: string } }) {
+  const query = searchParams?.q?.trim() || "";
+  const queryLower = query.toLowerCase();
+
+  const filteredPlants = queryLower
+    ? plants.filter(
+        (plant) =>
+          plant.name.toLowerCase().includes(queryLower) ||
+          plant.type.toLowerCase().includes(queryLower)
+      )
+    : plants;
+
   return (
     <div className="bg-surface text-on-surface font-body selection:bg-tertiary-fixed-dim selection:text-tertiary">
       <main className="min-h-screen">
@@ -134,7 +145,7 @@ export default function Shop() {
               ))}
             </div>
             <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-outline">
-              <span>Showing {plants.length} Items</span>
+              <span>Showing {filteredPlants.length} Items</span>
               <div className="h-4 w-px bg-outline-variant" />
               <button className="text-primary flex items-center gap-1">Sort: Price ↑ <span className="material-symbols-outlined text-sm">sort</span></button>
             </div>
@@ -144,30 +155,46 @@ export default function Shop() {
         {/* Product Grid */}
         <section className="px-6 sm:px-12 md:px-20 py-12">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
-            {plants.map((plant) => (
-              <div key={plant.id} className="group">
-                <div className="relative aspect-[4/5] bg-surface-container-low overflow-hidden cursor-pointer">
-                  <Image className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={plant.img} alt={plant.name} fill />
-                  {plant.tag && (
-                    <div className="absolute top-3 left-3 bg-tertiary-fixed-dim text-on-tertiary-fixed px-3 py-1 text-[10px] font-black uppercase tracking-wider">
-                      {plant.tag}
-                    </div>
-                  )}
-                </div>
-                <div className="mt-4">
-                  <h3 className="font-headline font-bold text-base uppercase tracking-tight text-primary">{plant.name}</h3>
-                  <p className="text-[11px] uppercase tracking-widest text-outline mt-1">{plant.type}</p>
-                  <div className="flex items-center justify-between mt-3">
-                    <span className="font-headline font-black text-xl text-primary">{plant.price}</span>
-                    <button className="bg-primary text-white px-4 py-2 text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-all">
-                      <span className="material-symbols-outlined text-sm">add_shopping_cart</span> Add
-                    </button>
-                  </div>
-                </div>
+            {filteredPlants.length === 0 ? (
+              <div className="py-24 text-center max-w-md mx-auto">
+                <span className="material-symbols-outlined text-5xl text-outline mb-4 opacity-40">search_off</span>
+                <h3 className="font-headline font-bold text-lg uppercase tracking-tight text-primary">No Plants Found</h3>
+                <p className="text-sm text-outline mt-2 leading-relaxed">
+                  We couldn&apos;t find any plants matching &ldquo;{query}&rdquo;. Double check the spelling or browse our default collection.
+                </p>
+                <Link
+                  href="/shop"
+                  className="mt-6 inline-block bg-primary text-white px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-all"
+                >
+                  View All Plants
+                </Link>
               </div>
-            ))}
-            </div>
+            ) : (
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
+                {filteredPlants.map((plant) => (
+                  <div key={plant.id} className="group">
+                    <div className="relative aspect-[4/5] bg-surface-container-low overflow-hidden cursor-pointer">
+                      <Image className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={plant.img} alt={plant.name} fill />
+                      {plant.tag && (
+                        <div className="absolute top-3 left-3 bg-tertiary-fixed-dim text-on-tertiary-fixed px-3 py-1 text-[10px] font-black uppercase tracking-wider">
+                          {plant.tag}
+                        </div>
+                      )}
+                    </div>
+                    <div className="mt-4">
+                      <h3 className="font-headline font-bold text-base uppercase tracking-tight text-primary">{plant.name}</h3>
+                      <p className="text-[11px] uppercase tracking-widest text-outline mt-1">{plant.type}</p>
+                      <div className="flex items-center justify-between mt-3">
+                        <span className="font-headline font-black text-xl text-primary">{plant.price}</span>
+                        <button className="bg-primary text-white px-4 py-2 text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-all">
+                          <span className="material-symbols-outlined text-sm">add_shopping_cart</span> Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 

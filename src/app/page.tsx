@@ -28,63 +28,68 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════ */}
-      <section className="relative min-h-[calc(100vh-40px)] flex items-center px-6 sm:px-12 md:px-20 overflow-hidden">
+      <section className="relative min-h-[calc(100vh-40px)] flex flex-col justify-end px-6 sm:px-12 md:px-20 pb-16 sm:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/nursery-grounds.png"
-            alt="Niky Farm and Nursery — lush plant nursery grounds"
-            fill
-            className="object-cover brightness-[0.35]"
-            priority
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/Firefly%20A%20cinematic%20slow%20push-forward%20through%20a%20lush%20plant%20nursery%20bathed%20in%20soft%20morning%20light.%20Row.mp4" type="video/mp4" />
+          </video>
+          {/* Left-to-right gradient overlay */}
+          <div 
+            className="absolute inset-0 pointer-events-none" 
+            style={{ 
+              background: 'linear-gradient(to right, rgba(15, 35, 15, 0.85) 0%, rgba(15, 35, 15, 0.4) 50%, rgba(15, 35, 15, 0) 100%)' 
+            }} 
           />
-          <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
+          {/* Bottom-to-top gradient for solid text legibility at the base */}
+          <div 
+            className="absolute inset-0 pointer-events-none" 
+            style={{ 
+              background: 'linear-gradient(to top, rgba(15, 35, 15, 0.9) 0%, rgba(15, 35, 15, 0) 40%)' 
+            }} 
+          />
         </div>
 
-        <div className="relative z-10 max-w-5xl w-full">
-          <span className="inline-block bg-tertiary-fixed-dim text-on-tertiary-fixed px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] mb-5">
-            Valsad&apos;s Favourite Plant Nursery
+        <div className="relative z-10 max-w-2xl w-full text-left">
+          <span className="inline-block text-white/70 text-xs sm:text-sm font-bold uppercase tracking-[0.25em] mb-6 font-headline">
+            Valsad, Gujarat · Est. 2026
           </span>
 
-          <h1 className="text-4xl sm:text-6xl md:text-[8rem] font-black text-white leading-[0.9] tracking-tighter mb-5 uppercase font-headline">
-            Niky Farm<br />
-            <span className="text-tertiary-fixed-dim">&amp; Nursery</span>
+          <h1 className="text-5xl sm:text-7xl md:text-[7rem] font-medium text-white leading-[1.05] tracking-tight mb-8 font-headline">
+            Grow<br />
+            Something<br />
+            Beautiful.
           </h1>
 
-          <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-xl mb-8 font-body leading-relaxed">
-            Valsad&apos;s only nursery with 500+ varieties — open today.
+          <p className="text-white/80 font-light text-base sm:text-xl md:text-2xl max-w-md mb-12 font-body leading-relaxed">
+            500+ plants, hand-grown and ready for your home.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Link
-              href="/shop"
-              aria-label="Shop Plants — browse our collection"
-              className="group bg-primary text-on-primary px-8 py-4 sm:px-10 sm:py-5 font-black uppercase tracking-widest text-sm hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-4 border border-white/10 relative overflow-hidden"
+              href="#categories"
+              aria-label="Browse Plants"
+              className="group bg-white text-primary px-8 py-4 sm:px-10 sm:py-5 font-bold uppercase tracking-widest text-sm hover:bg-tertiary-fixed-dim hover:text-on-tertiary-fixed transition-all inline-flex items-center justify-center gap-4 relative overflow-hidden self-start"
             >
-              <span className="relative z-10">Shop Now</span>
-              <span className="material-symbols-outlined relative z-10 group-hover:translate-x-2 transition-transform duration-300" aria-hidden="true">
-                arrow_forward
+              <span className="relative z-10">Browse Plants</span>
+              <span className="relative z-10 group-hover:translate-y-1 transition-transform duration-300" aria-hidden="true">
+                ↓
               </span>
-              <div className="absolute inset-0 bg-tertiary-fixed-dim translate-y-full group-hover:translate-y-0 transition-transform duration-300" aria-hidden="true" />
             </Link>
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp Us"
-              className="group px-8 py-4 sm:px-10 sm:py-5 font-bold uppercase tracking-widest text-sm text-white border border-white/30 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all flex items-center justify-center gap-4"
-            >
-              <span>WhatsApp Us</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-              </svg>
-            </a>
           </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-white/40 text-[10px] uppercase tracking-widest font-body">Scroll</span>
-          <span className="material-symbols-outlined text-white/40">expand_more</span>
+          {/* Scroll Indicator */}
+          <div className="flex items-center gap-4 text-white/50">
+            <span className="text-[10px] uppercase tracking-[0.2em] font-body">Scroll to explore</span>
+            <div className="w-[1px] h-8 bg-white/20 relative overflow-hidden">
+              <div className="w-full h-3 bg-white absolute top-0 animate-[bounce_2s_infinite]" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -115,7 +120,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           PLANT CATEGORIES (Visual Tiles)
       ═══════════════════════════════════════════ */}
-      <section className="py-16 sm:py-24 px-6 sm:px-12 md:px-20 bg-background">
+      <section id="categories" className="py-16 sm:py-24 px-6 sm:px-12 md:px-20 bg-background">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-3 sm:gap-5">
           {plantCategories.map((cat, i) => (
             <Link
