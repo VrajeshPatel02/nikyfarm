@@ -61,7 +61,7 @@ export default function AboutPage() {
               <div className="p-8 sm:p-10 bg-tertiary-container text-tertiary-fixed-dim">
                 <span className="font-headline font-bold text-xs tracking-widest block mb-4 uppercase">Our Values</span>
                 <p className="text-base font-light">
-                100% organic growing practices. No chemical fertilizers. Sustainable and earth-friendly from seed to sale.
+                  100% organic growing practices. No chemical fertilizers. Sustainable and earth-friendly from seed to sale.
                 </p>
               </div>
             </div>

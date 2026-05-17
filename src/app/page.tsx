@@ -57,7 +57,7 @@ export default function Home() {
 
         <div className="relative z-10 max-w-2xl w-full text-left">
           <span className="inline-block text-white/70 text-xs sm:text-sm font-bold uppercase tracking-[0.25em] mb-6 font-headline">
-            Valsad, Gujarat · Est. 2026
+            Valsad, Gujarat · Est. 2002
           </span>
 
           <h1 className="text-5xl sm:text-7xl md:text-[7rem] font-medium text-white leading-[1.05] tracking-tight mb-8 font-headline">
